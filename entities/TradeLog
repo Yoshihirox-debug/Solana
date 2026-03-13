@@ -1,0 +1,42 @@
+{
+  "name": "TradeLog",
+  "type": "object",
+  "properties": {
+    "level": {
+      "type": "string",
+      "enum": [
+        "info",
+        "warning",
+        "error",
+        "success",
+        "trade"
+      ],
+      "default": "info"
+    },
+    "message": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string",
+      "description": "Additional JSON details"
+    },
+    "token_symbol": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "scanner",
+        "trade",
+        "strategy",
+        "system",
+        "alert"
+      ],
+      "default": "system"
+    }
+  },
+  "required": [
+    "level",
+    "message"
+  ]
+}

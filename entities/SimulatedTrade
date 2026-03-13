@@ -1,0 +1,87 @@
+{
+  "name": "SimulatedTrade",
+  "type": "object",
+  "properties": {
+    "token_name": {
+      "type": "string",
+      "description": "Name of the memecoin token"
+    },
+    "token_symbol": {
+      "type": "string",
+      "description": "Symbol of the token"
+    },
+    "token_address": {
+      "type": "string",
+      "description": "Solana address of the token"
+    },
+    "buy_price": {
+      "type": "number",
+      "description": "Price at simulated buy"
+    },
+    "sell_price": {
+      "type": "number",
+      "description": "Price at simulated sell"
+    },
+    "amount_sol": {
+      "type": "number",
+      "description": "Amount of SOL invested"
+    },
+    "tokens_bought": {
+      "type": "number",
+      "description": "Number of tokens bought"
+    },
+    "profit_loss_sol": {
+      "type": "number",
+      "description": "Profit or loss in SOL"
+    },
+    "profit_loss_pct": {
+      "type": "number",
+      "description": "Profit or loss percentage"
+    },
+    "strategy": {
+      "type": "string",
+      "enum": [
+        "quick_flip",
+        "momentum",
+        "dip_buy",
+        "volume_spike"
+      ],
+      "description": "Strategy used for this trade"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "open",
+        "closed",
+        "stopped"
+      ],
+      "default": "open",
+      "description": "Status of the trade"
+    },
+    "buy_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the buy was simulated"
+    },
+    "sell_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the sell was simulated"
+    },
+    "stop_loss_triggered": {
+      "type": "boolean",
+      "default": false
+    },
+    "take_profit_triggered": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "token_name",
+    "token_symbol",
+    "buy_price",
+    "amount_sol",
+    "status"
+  ]
+}

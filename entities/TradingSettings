@@ -1,0 +1,70 @@
+{
+  "name": "TradingSettings",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "default": "default",
+      "description": "Settings profile name"
+    },
+    "investment_per_trade_sol": {
+      "type": "number",
+      "default": 0.5,
+      "description": "SOL amount per trade"
+    },
+    "stop_loss_pct": {
+      "type": "number",
+      "default": 15,
+      "description": "Stop loss percentage"
+    },
+    "take_profit_pct": {
+      "type": "number",
+      "default": 50,
+      "description": "Take profit percentage"
+    },
+    "min_liquidity_sol": {
+      "type": "number",
+      "default": 10,
+      "description": "Minimum liquidity in SOL"
+    },
+    "min_volume_24h": {
+      "type": "number",
+      "default": 1000,
+      "description": "Minimum 24h volume in USD"
+    },
+    "max_market_cap": {
+      "type": "number",
+      "default": 500000,
+      "description": "Maximum market cap in USD"
+    },
+    "min_holders": {
+      "type": "number",
+      "default": 50,
+      "description": "Minimum number of holders"
+    },
+    "auto_sell_after_minutes": {
+      "type": "number",
+      "default": 60,
+      "description": "Auto sell after X minutes"
+    },
+    "max_open_trades": {
+      "type": "number",
+      "default": 5,
+      "description": "Maximum concurrent open trades"
+    },
+    "strategies_enabled": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of enabled strategies"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name"
+  ]
+}
